@@ -141,12 +141,21 @@ const Navbar: React.FC = () => {
 
           {/* Login & Signup Buttons - Desktop */}
           <div className="hidden lg:flex items-center space-x-4">
-            <Button variant="outline" className="p-5">
+            <Button
+              variant="outline"
+              className="p-5"
+              onClick={() => {
+                window.location.href = "/login";
+              }}
+            >
               Log in
             </Button>
             <Button
               variant="default"
               className="p-5 bg-[#2C3B8B] hover:bg-[#1F2B6B]"
+              onClick={() => {
+                window.location.href = "/signup";
+              }}
             >
               Sign up
             </Button>
@@ -265,12 +274,18 @@ const Navbar: React.FC = () => {
                   <Button
                     variant="outline"
                     className="w-full justify-center p-5"
+                    onClick={() => {
+                      window.location.href = "/login";
+                    }}
                   >
                     Log in
                   </Button>
                   <Button
                     variant="default"
                     className="w-full justify-center p-5 bg-[#2C3B8B] hover:bg-[#1F2B6B]"
+                    onClick={() => {
+                      window.location.href = "/signup";
+                    }}
                   >
                     Sign up
                   </Button>

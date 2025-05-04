@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "./components/global/Layout";
 import Homepage from "./views/LandingPage/Homepage";
+import AuthPage from "./views/Authentication/AuthPage";
 
 function App() {
   return (
@@ -11,6 +12,9 @@ function App() {
           {/* Nested routes for each page within the website */}
           <Route index element={<Homepage />} />
         </Route>
+        {/* Authentication Routes */}
+        <Route path="/login" element={<AuthPage />} />
+        <Route path="/signup" element={<AuthPage />} />
       </Routes>
     </Router>
   );
