@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "../ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown } from "lucide-react";
+import Logo from "../../assets/images/carepadi-logo.png";
 
 const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -77,11 +78,11 @@ const Navbar: React.FC = () => {
             onClick={closeAllMenus}
           >
             <motion.p
-              className="text-[#2C3B8B] font-semibold text-[18px] sm:text-[20px]"
+              className="text-[#2C3B8B] "
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.2 }}
             >
-              CAREPADI
+              <img src={Logo} alt="Carepadi Logo" className="w-32" />
             </motion.p>
           </Link>
 
